@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#071c2c">
+<meta name="description" content="Aqua G: lavado de coches a domicilio. Elige tu servicio y solicita una cita de forma rápida y sencilla.">
+<title>Aqua G | Lavado de coches a domicilio</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+:root{--navy:#071c2c;--navy2:#0c2c40;--blue:#16b8d4;--blue2:#0788ac;--ink:#122536;--muted:#657787;--paper:#f5f8fa;--white:#fff;--line:#e2eaf0;--lime:#d6f36a;--radius:22px;--shadow:0 18px 55px rgba(7,28,44,.09)}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth;scroll-padding-top:90px}
+body{font-family:'DM Sans',sans-serif;background:var(--paper);color:var(--ink);line-height:1.65}
+a{color:inherit;text-decoration:none}
+button,input,select,textarea{font:inherit}
+button,a,input,select,textarea{-webkit-tap-highlight-color:transparent}
+button:focus-visible,a:focus-visible,input:focus-visible,select:focus-visible,textarea:focus-visible{outline:3px solid #16b8d4;outline-offset:3px}
+.container{width:min(1160px,calc(100% - 40px));margin-inline:auto}
+header{position:sticky;top:0;z-index:20;background:rgba(255,255,255,.92);backdrop-filter:blur(16px);border-bottom:1px solid rgba(226,234,240,.8)}
+.nav{height:78px;display:flex;align-items:center;justify-content:space-between;gap:22px}
+.logo{display:flex;align-items:center;gap:10px;font:800 1.35rem Manrope,sans-serif;letter-spacing:-.8px;color:var(--navy)}
+.logo-mark{width:38px;height:38px;border-radius:13px;display:grid;place-items:center;background:var(--navy);color:var(--blue)}
+.logo-mark svg{width:22px;height:22px}
+.logo span{color:var(--blue2)}
+.nav-links{display:flex;align-items:center;gap:30px;color:#526575;font-size:.94rem;font-weight:600}
+.nav-links a:hover{color:var(--blue2)}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;padding:13px 21px;border:0;border-radius:12px;background:var(--blue);color:var(--navy);font-weight:800;cursor:pointer;transition:transform .2s,background .2s,box-shadow .2s;box-shadow:0 8px 22px rgba(22,184,212,.18)}
+.btn:hover{background:#45d3e6;transform:translateY(-2px)}
+.btn.dark{background:var(--navy);color:white;box-shadow:none}.btn.dark:hover{background:var(--navy2)}
+.btn.small{padding:10px 16px;font-size:.9rem}
+.menu-toggle{display:none;background:none;border:0;font-size:1.6rem;color:var(--navy);cursor:pointer}
+.hero{position:relative;overflow:hidden;background:var(--navy);color:white;padding:82px 0 88px}
+.hero:before{content:"";position:absolute;width:600px;height:600px;right:-120px;top:-260px;border-radius:50%;background:radial-gradient(circle,rgba(22,184,212,.25),transparent 68%)}
+.hero-grid{position:relative;display:grid;grid-template-columns:1.05fr .95fr;align-items:center;gap:56px}
+.eyebrow{display:inline-flex;align-items:center;gap:9px;color:var(--lime);font-size:.78rem;letter-spacing:1.7px;text-transform:uppercase;font-weight:800;margin-bottom:20px}
+.eyebrow:before{content:"";width:25px;height:2px;background:currentColor}
+h1,h2,h3{font-family:Manrope,sans-serif;letter-spacing:-1.2px;line-height:1.15}
+h1{font-size:clamp(2.7rem,5.2vw,4.7rem);max-width:660px;font-weight:800}
+h1 em{font-style:normal;color:var(--blue)}
+.hero-copy{font-size:1.12rem;color:#b8cbd7;max-width:550px;margin:24px 0 30px}
+.hero-actions{display:flex;gap:13px;flex-wrap:wrap}
+.btn.outline{border:1px solid #436074;color:white;background:transparent;box-shadow:none}.btn.outline:hover{background:#17394d}
+.trust-row{display:flex;gap:22px;flex-wrap:wrap;margin-top:33px;color:#c7d6df;font-size:.88rem}
+.trust-row span{display:flex;align-items:center;gap:8px}.check{color:var(--lime);font-weight:900}
+.hero-photo{position:relative;min-height:430px;border-radius:30px;overflow:hidden;background:linear-gradient(135deg, #0c2c40 0%, #16b8d4 100%)}
+.hero-photo img{position:absolute;width:100%;height:100%;object-fit:cover;inset:0;display:block}
+.hero-photo:after{content:"";position:absolute;inset:0;background:linear-gradient(0deg,rgba(7,28,44,.75),transparent 60%)}
+.photo-label{position:absolute;z-index:2;bottom:23px;left:23px;right:23px;display:flex;align-items:end;justify-content:space-between;gap:15px;color:white}
+.photo-label strong{font:700 1.15rem Manrope,sans-serif}.photo-label small{display:block;color:#d7e5ed;margin-top:4px}
+.rating{background:white;color:var(--navy);padding:10px 13px;border-radius:13px;font-weight:800;white-space:nowrap}.rating span{color:#f5a623}
+.stats{background:white;border-bottom:1px solid var(--line)}
+.stats-grid{display:grid;grid-template-columns:repeat(3,1fr);padding:25px 0;gap:20px}
+.stat{display:flex;align-items:center;justify-content:center;gap:12px;border-right:1px solid var(--line)}.stat:last-child{border:0}
+.stat-icon{width:43px;height:43px;border-radius:14px;background:#e5f9fc;display:grid;place-items:center;font-size:1.25rem}
+.stat strong{display:block;font:800 1.05rem Manrope,sans-serif}.stat small{color:var(--muted);font-size:.82rem}
+section.content-section{padding:90px 0}
+.section-head{text-align:center;max-width:680px;margin:0 auto 42px}
+.kicker{font-size:.78rem;color:var(--blue2);font-weight:800;letter-spacing:1.8px;text-transform:uppercase;margin-bottom:12px}
+h2{font-size:clamp(2rem,3.4vw,3rem);color:var(--navy);font-weight:800}
+.section-head p{color:var(--muted);margin-top:14px;font-size:1.05rem}
+.services{display:grid;grid-template-columns:repeat(3,1fr);gap:22px;align-items:stretch}
+.service-card{background:white;border:1px solid var(--line);border-radius:var(--radius);overflow:hidden;display:flex;flex-direction:column;position:relative;transition:transform .25s,box-shadow .25s}
+.service-card:hover{transform:translateY(-6px);box-shadow:var(--shadow)}
+.service-card.popular{border:2px solid var(--blue)}
+.popular-tag{position:absolute;z-index:2;top:15px;right:15px;background:var(--lime);color:var(--navy);padding:6px 11px;border-radius:100px;font-size:.72rem;font-weight:900;text-transform:uppercase;letter-spacing:.5px}
+.service-image{height:190px;overflow:hidden;background:#0c2c40;position:relative}.service-image img{width:100%;height:100%;object-fit:cover;transition:transform .5s;display:block}.service-card:hover .service-image img{transform:scale(1.05)}
+.service-body{padding:25px;display:flex;flex-direction:column;flex:1}
+.service-body h3{font-size:1.35rem;color:var(--navy);letter-spacing:-.5px}
+.service-desc{color:var(--muted);font-size:.94rem;margin:10px 0 20px;min-height:50px}
+.features{list-style:none;border-top:1px solid var(--line);padding-top:18px;margin-bottom:23px;flex:1}
+.features li{display:flex;gap:10px;margin:9px 0;font-size:.9rem;color:#405465}.features li:before{content:"✓";font-weight:900;color:var(--blue2)}
+.price-row{display:flex;align-items:center;justify-content:space-between;gap:12px}
+.price{font:800 2rem Manrope,sans-serif;color:var(--navy);letter-spacing:-1px}.price small{font:500 .82rem 'DM Sans',sans-serif;color:var(--muted);letter-spacing:0}
+.how{background:#eaf4f7}
+.steps{display:grid;grid-template-columns:repeat(3,1fr);gap:26px}
+.step{background:rgba(255,255,255,.78);padding:28px;border-radius:20px;border:1px solid #dbe9ee}
+.step-number{width:46px;height:46px;border-radius:15px;background:var(--navy);color:var(--lime);display:grid;place-items:center;font:800 1.1rem Manrope,sans-serif;margin-bottom:20px}
+.step h3{font-size:1.15rem;color:var(--navy);letter-spacing:-.3px}.step p{color:var(--muted);font-size:.94rem;margin-top:9px}
+.booking-wrap{display:grid;grid-template-columns:.72fr 1.28fr;gap:42px;align-items:start}
+.booking-aside{background:var(--navy);color:white;padding:34px;border-radius:24px;position:sticky;top:105px}
+.booking-aside h3{font-size:1.7rem}.booking-aside p{color:#b9cbd6;margin:14px 0 25px}
+.aside-point{display:flex;gap:12px;margin:18px 0;color:#e5f0f5;font-size:.92rem}.aside-point b{color:var(--lime)}
+.booking-card{background:white;border:1px solid var(--line);padding:34px;border-radius:24px;box-shadow:var(--shadow)}
+.summary{display:flex;justify-content:space-between;align-items:center;gap:14px;background:#eaf8fa;border:1px solid #d1f0f4;border-radius:14px;padding:16px 18px;margin-bottom:26px}
+.summary span:first-child{color:#536a78;font-size:.9rem}.summary strong{color:var(--navy);text-align:right}
+.form-grid{display:grid;grid-template-columns:1fr 1fr;gap:18px}
+.field{display:flex;flex-direction:column;gap:7px}.field.full{grid-column:1/-1}
+label{font-size:.86rem;font-weight:800;color:#233b4c}
+input,select,textarea{width:100%;border:1px solid #d9e3e9;background:#fbfdfe;border-radius:10px;padding:12px 13px;color:var(--ink);transition:border .2s,box-shadow .2s}
+input:focus,select:focus,textarea:focus{outline:none;border-color:var(--blue2);box-shadow:0 0 0 3px rgba(22,184,212,.13)}
+.payment-title{font-size:.86rem;font-weight:800;margin:24px 0 9px}
+.payment-options{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+.payment-option{border:1px solid #d9e3e9;border-radius:12px;padding:14px;display:flex;align-items:center;gap:10px;cursor:pointer}
+.payment-option:has(input:checked){border-color:var(--blue2);background:#effcff}
+.payment-option input{width:auto;accent-color:var(--blue2)}
+.submit{width:100%;margin-top:24px;padding:15px;font-size:1rem}
+.fineprint{font-size:.78rem;color:var(--muted);margin-top:12px;text-align:center}
+.notice{display:none;padding:14px 16px;border-radius:12px;margin-top:18px;font-size:.92rem}
+.notice.show{display:block;background:#edf9ef;color:#1e6330;border:1px solid #c9ebcf}
+.faq{background:white}
+.faq-list{max-width:800px;margin:auto}
+details{border-bottom:1px solid var(--line);padding:20px 4px}
+summary{cursor:pointer;font-weight:800;color:var(--navy);list-style:none;display:flex;justify-content:space-between;gap:20px}
+summary:after{content:"+";color:var(--blue2);font-size:1.35rem;line-height:1}
+details[open] summary:after{content:"−"}
+details p{color:var(--muted);padding:12px 25px 0 0}
+.cta{background:var(--blue);padding:42px;border-radius:24px;display:flex;justify-content:space-between;align-items:center;gap:25px}
+.cta h2{font-size:clamp(1.7rem,3vw,2.4rem)}.cta p{color:#164858;margin-top:8px}
+footer{background:var(--navy);color:#b8cbd7;padding:38px 0 25px}
+.footer-top{display:flex;justify-content:space-between;gap:25px;align-items:center;padding-bottom:25px;border-bottom:1px solid #254052}
+footer .logo{color:white}footer .logo-mark{background:#15394c}footer .logo span{color:var(--blue)}
+.footer-links{display:flex;gap:20px;font-size:.88rem}.footer-links a:hover{color:white}
+.footer-bottom{padding-top:20px;display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap;font-size:.8rem;color:#829aa9}
+@media(max-width:900px){.hero-grid{grid-template-columns:1fr;gap:35px}.hero-photo{min-height:350px}.services{grid-template-columns:repeat(2,1fr)}.service-card:last-child{grid-column:1/-1;max-width:calc(50% - 11px);justify-self:center}.booking-wrap{grid-template-columns:1fr}.booking-aside{position:static}.steps{gap:15px}}
+@media(max-width:680px){.container{width:min(100% - 28px,1160px)}.nav{height:68px}.nav-links{display:none;position:absolute;top:68px;left:0;right:0;padding:18px 22px 22px;background:white;border-bottom:1px solid var(--line);flex-direction:column;align-items:stretch;gap:17px}.nav-links.open{display:flex}.nav-links .btn{width:100%}.menu-toggle{display:block}.nav>.btn{display:none}.hero{padding:60px 0}.hero-grid{gap:30px}h1{font-size:2.65rem}.hero-copy{font-size:1rem}.hero-photo{min-height:290px;border-radius:22px}.trust-row{gap:12px}.stats-grid{grid-template-columns:1fr;padding:12px 0;gap:0}.stat{justify-content:flex-start;border-right:0;border-bottom:1px solid var(--line);padding:12px 4px}.stat:last-child{border-bottom:0}.content-section{padding:65px 0!important}.services,.steps{grid-template-columns:1fr}.service-card:last-child{grid-column:auto;max-width:none}.service-image{height:210px}.section-head{margin-bottom:30px}.booking-card,.booking-aside{padding:23px}.form-grid{grid-template-columns:1fr}.field.full{grid-column:auto}.payment-options{grid-template-columns:1fr}.cta{padding:27px;align-items:flex-start;flex-direction:column}.footer-top{align-items:flex-start;flex-direction:column}.footer-links{flex-wrap:wrap}.price{font-size:1.8rem}}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*,*:before,*:after{transition:none!important}}
+</style>
+</head>
+<body>
+<header>
+  <div class="container nav">
+    <a class="logo" href="#inicio" aria-label="Aqua G, inicio">
+      <span class="logo-mark"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3C9 7 5.5 10.5 5.5 15a6.5 6.5 0 0 0 13 0C18.5 10.5 15 7 12 3Z"/><path d="M9 16a3 3 0 0 0 3 3"/></svg></span>
+      Aqua <span>G</span>
+    </a>
+    <nav class="nav-links" id="navLinks" aria-label="Navegación principal">
+      <a href="#servicios">Servicios</a><a href="#como-funciona">Cómo funciona</a><a href="#preguntas">Preguntas frecuentes</a><a class="btn small" href="#reservar">Reservar cita ↗</a>
+    </nav>
+    <a class="btn small" href="#reservar">Reservar cita</a>
+    <button class="menu-toggle" id="menuToggle" aria-label="Abrir menú" aria-expanded="false">☰</button>
+  </div>
+</header>
+<main>
+<section class="hero" id="inicio">
+  <div class="container hero-grid">
+    <div>
+      <div class="eyebrow">Tu coche, en buenas manos</div>
+      <h1>Brillo de estreno.<br><em>Sin salir de casa.</em></h1>
+      <p class="hero-copy">Lavado ecológico y cuidado de vehículos a domicilio con atención al detalle, sin esperas y con productos sostenibles. Tú eliges el servicio; nosotros ponemos el mimo.</p>
+      <div class="hero-actions"><a class="btn" href="#servicios">Descubrir servicios <span>↓</span></a><a class="btn outline" href="#como-funciona">Cómo funciona</a></div>
+      <div class="trust-row"><span><b class="check">✓</b> A domicilio</span><span><b class="check">✓</b> Ecológico</span><span><b class="check">✓</b> Sin esperas</span></div>
+    </div>
+    <div class="hero-photo">
+      <img src="https://images.unsplash.com/photo-1520340356584-f9917d1eed69?auto=format&fit=crop&w=1200&q=80" alt="Coche recién lavado y brillante" fetchpriority="high" onerror="this.onerror=null;this.src='data:image/svg+xml;utf8,<svg xmlns=\'http://www.w3.org/2000/svg\' width=\'600\' height=\'400\' viewBox=\'0 0 600 400\'><rect width=\'100%\' height=\'100%\' fill=\'%230c2c40\'/><text x=\'50%\' y=\'50%\' fill=\'%2316b8d4\' font-family=\'sans-serif\' font-size=\'24\' text-anchor=\'middle\'>Aqua G Premium</text></svg>';">
+      <div class="photo-label"><div><strong>Un acabado que se nota</strong><small>Pequeños detalles, gran diferencia.</small></div><div class="rating"><span>✦</span> Servicio premium</div></div>
+    </div>
+  </div>
+</section>
+<div class="stats"><div class="container stats-grid">
+  <div class="stat"><div class="stat-icon">🚗</div><div><strong>En tu ubicación</strong><small>Comodidad sin desplazamientos</small></div></div>
+  <div class="stat"><div class="stat-icon">🌱</div><div><strong>Ecológico</strong><small>Cuidamos del planeta</small></div></div>
+  <div class="stat"><div class="stat-icon">⏱️</div><div><strong>Sin esperas</strong><small>Ahorra tiempo libre</small></div></div>
+</div></div>
+<section class="content-section" id="servicios">
+  <div class="container">
+    <div class="section-head"><div class="kicker">Nuestros servicios</div><h2>El cuidado que tu coche merece</h2><p>Escoge el paquete que mejor se adapta a tu vehículo. Sin sorpresas: cada servicio tiene su precio e inclusión detallados.</p></div>
+    <div class="services">
+      <article class="service-card">
+        <div class="service-image"><img src="https://images.unsplash.com/photo-1552930294-6b595f4c2974?auto=format&fit=crop&w=800&q=80" alt="Lavado exterior de coche" loading="lazy" onerror="this.onerror=null;this.src='data:image/svg+xml;utf8,<svg xmlns=\'http://www.w3.org/2000/svg\' width=\'400\' height=\'250\' viewBox=\'0 0 400 250\'><rect width=\'100%\' height=\'100%\' fill=\'%23122536\'/><text x=\'50%\' y=\'50%\' fill=\'%23ffffff\' font-family=\'sans-serif\' font-size=\'18\' text-anchor=\'middle\'>Lavado Básico</text></svg>';"></div>
+        <div class="service-body"><h3>Básico</h3><p class="service-desc">Un lavado exterior práctico para mantener la carrocería y llantas limpias.</p>
+          <ul class="features"><li>Lavado a mano exterior</li><li>Champú con pH neutro</li><li>Limpieza de llantas y neumáticos</li><li>Secado a mano con microfibra</li><li>Cristales exteriores</li></ul>
+          <div class="price-row"><div class="price">15 € <small>/ lavado</small></div><button class="btn small choose" data-service="Básico" data-price="15">Elegir</button></div>
+        </div>
+      </article>
+      <article class="service-card popular">
+        <span class="popular-tag">Más elegido</span>
+        <div class="service-image"><img src="https://images.unsplash.com/photo-1507136566006-cfc505b114fc?auto=format&fit=crop&w=800&q=80" alt="Limpieza interior y exterior del vehículo" loading="lazy" onerror="this.onerror=null;this.src='data:image/svg+xml;utf8,<svg xmlns=\'http://www.w3.org/2000/svg\' width=\'400\' height=\'250\' viewBox=\'0 0 400 250\'><rect width=\'100%\' height=\'100%\' fill=\'%230788ac\'/><text x=\'50%\' y=\'50%\' fill=\'%23ffffff\' font-family=\'sans-serif\' font-size=\'18\' text-anchor=\'middle\'>Lavado Mediano</text></svg>';"></div>
+        <div class="service-body"><h3>Mediano</h3><p class="service-desc">Limpieza completa interior y exterior para renovar tu vehículo por dentro y fuera.</p>
+          <ul class="features"><li>Todo lo incluido en el Básico</li><li>Aspirado profundo de alfombrillas y asientos</li><li>Limpieza de salpicadero y plásticos</li><li>Repaso integral del habitáculo</li><li>Aromatización ecológica</li></ul>
+          <div class="price-row"><div class="price">25 € <small>/ lavado</small></div><button class="btn small choose" data-service="Mediano" data-price="25">Elegir</button></div>
+        </div>
+      </article>
+      <article class="service-card">
+        <div class="service-image"><img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=800&q=80" alt="Detalle de lavado de coche premium" loading="lazy" onerror="this.onerror=null;this.src='data:image/svg+xml;utf8,<svg xmlns=\'http://www.w3.org/2000/svg\' width=\'400\' height=\'250\' viewBox=\'0 0 400 250\'><rect width=\'100%\' height=\'100%\' fill=\'%23071c2c\'/><text x=\'50%\' y=\'50%\' fill=\'%23d6f36a\' font-family=\'sans-serif\' font-size=\'18\' text-anchor=\'middle\'>Lavado Premium</text></svg>';"></div>
+        <div class="service-body"><h3>Premium</h3><p class="service-desc">Un cuidado exhaustivo y profundo con acabado brillante y protección de materiales.</p>
+          <ul class="features"><li>Todo lo incluido en el Mediano</li><li>Encerado manual protector</li><li>Tratamiento de hidratación para plásticos y gomas</li><li>Detallado intensivo de llantas y paso de rueda</li><li>Desinfección de superficies y cristales por dentro y fuera</li></ul>
+          <div class="price-row"><div class="price">45 € <small>/ lavado</small></div><button class="btn small choose" data-service="Premium" data-price="45">Elegir</button></div>
+        </div>
+      </article>
+    </div>
+  </div>
+</section>
+<section class="content-section how" id="como-funciona">
+  <div class="container">
+    <div class="section-head"><div class="kicker">Así de sencillo</div><h2>Tu cita en tres pasos</h2><p>Organiza tu solicitud en menos de un minuto desde cualquier dispositivo.</p></div>
+    <div class="steps">
+      <article class="step"><div class="step-number">01</div><h3>Elige tu lavado</h3><p>Selecciona entre Básico, Mediano o Premium según las necesidades de tu coche.</p></article>
+      <article class="step"><div class="step-number">02</div><h3>Cuéntanos dónde</h3><p>Indica tus datos, el vehículo, la dirección y la franja horaria preferida.</p></article>
+      <article class="step"><div class="step-number">03</div><h3>Envía tu solicitud</h3><p>Revisa el resumen y envía la petición. Confirmaremos la cita rápidamente.</p></article>
+    </div>
+  </div>
+</section>
+<section class="content-section" id="reservar">
+  <div class="container">
+    <div class="section-head"><div class="kicker">Reserva tu cita</div><h2>Vamos a dejarlo impecable</h2><p>Rellena el formulario para preparar tu solicitud de servicio.</p></div>
+    <div class="booking-wrap">
+      <aside class="booking-aside"><div class="eyebrow">Aqua G a domicilio</div><h3>Más tiempo para ti. Más cuidado para tu coche.</h3><p>Selecciona un servicio y dinos cuándo y dónde te viene mejor.</p>
+        <div class="aside-point"><b>✓</b><span>Paquetes con precios visibles</span></div><div class="aside-point"><b>✓</b><span>Solicitud adaptada a tu horario</span></div><div class="aside-point"><b>✓</b><span>Productos ecológicos y biodegradables</span></div>
+      </aside>
+      <div class="booking-card">
+        <form id="bookingForm">
+          <div class="summary"><span>Tu selección</span><strong id="selectedText">Selecciona un servicio</strong></div>
+          <div class="form-grid">
+            <div class="field"><label for="nombre">Nombre y apellidos</label><input id="nombre" name="nombre" autocomplete="name" required placeholder="Ej. Ana García"></div>
+            <div class="field"><label for="telefono">Teléfono de contacto</label><input id="telefono" name="telefono" type="tel" autocomplete="tel" inputmode="tel" pattern="[0-9+() .-]{9,}" required placeholder="Ej. 600 123 456"></div>
+            <div class="field"><label for="vehiculo">Marca y modelo</label><input id="vehiculo" name="vehiculo" required placeholder="Ej. SEAT León"></div>
+            <div class="field"><label for="matricula">Matrícula</label><input id="matricula" name="matricula" required maxlength="12" placeholder="Ej. 1234 ABC"></div>
+            <div class="field"><label for="fecha">Fecha preferida</label><input id="fecha" name="fecha" type="date" required></div>
+            <div class="field"><label for="franja">Franja horaria</label><select id="franja" name="franja" required><option value="">Selecciona una franja</option><option>Mañana (09:00–13:00)</option><option>Tarde (15:00–19:00)</option></select></div>
+            <div class="field full"><label for="direccion">Dirección del servicio</label><input id="direccion" name="direccion" autocomplete="street-address" required placeholder="Calle, número, localidad y detalles de acceso"></div>
+            <div class="field full"><label for="notas">Notas adicionales (opcional)</label><textarea id="notas" name="notas" rows="3" placeholder="Detalles que debamos tener en cuenta…"></textarea></div>
+          </div>
+          <div class="payment-title">Método de pago preferido</div>
+          <div class="payment-options">
+            <label class="payment-option"><input type="radio" name="pago" value="PayPal / tarjeta" checked><span>💳 PayPal / tarjeta</span></label>
+            <label class="payment-option"><input type="radio" name="pago" value="Efectivo al técnico"><span>💵 Efectivo al técnico</span></label>
+          </div>
+          <button type="submit" class="btn dark submit">Preparar solicitud <span>→</span></button>
+          <p class="fineprint">Esta web prepara una solicitud de demostración; no realiza pagos ni confirma citas automáticamente.</p>
+          <div class="notice" id="formNotice" role="status" aria-live="polite"></div>
+        </form>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="content-section faq" id="preguntas">
+  <div class="container"><div class="section-head"><div class="kicker">¿Tienes dudas?</div><h2>Preguntas frecuentes</h2><p>La información que necesitas antes de pedir tu cita.</p></div>
+    <div class="faq-list">
+      <details><summary>¿El lavado se realiza en mi domicilio?</summary><p>Sí, el servicio está planteado para realizarse en la dirección que indiques al solicitar la cita. La disponibilidad debe confirmarse con el equipo de Aqua G.</p></details>
+      <details><summary>¿Qué paquete debería elegir?</summary><p>El lavado Básico es ideal para el mantenimiento exterior; el Mediano añade la limpieza interior; el Premium ofrece una limpieza e higienización en profundidad con protección de materiales.</p></details>
+      <details><summary>¿La reserva queda confirmada al enviar el formulario?</summary><p>No. El formulario prepara un resumen de la solicitud. El equipo te contactará para confirmar fecha y hora.</p></details>
+      <details><summary>¿Usáis productos respetuosos con el medio ambiente?</summary><p>Sí, empleamos productos ecológicos y respetuosos para minimizar el consumo de agua y el impacto ambiental.</p></details>
+    </div>
+  </div>
+</section>
+<section class="container" style="padding-bottom:80px"><div class="cta"><div><h2>¿Listo para volver a enamorarte de tu coche?</h2><p>Elige tu paquete y prepara tu solicitud de cita.</p></div><a href="#reservar" class="btn dark">Reservar ahora ↗</a></div></section>
+</main>
+<footer><div class="container">
+  <div class="footer-top"><a class="logo" href="#inicio"><span class="logo-mark">✦</span>Aqua <span>G</span></a><div class="footer-links"><a href="#servicios">Servicios</a><a href="#reservar">Reservas</a><a href="#preguntas">Preguntas frecuentes</a></div></div>
+  <div class="footer-bottom"><span>© <span id="year"></span> Aqua G. Todos los derechos reservados.</span><span>Lavado de coches a domicilio · A domicilio, ecológico y sin esperas</span></div>
+</div></footer>
+<script>
+const serviceButtons = document.querySelectorAll('.choose');
+const selectedText = document.getElementById('selectedText');
+const bookingForm = document.getElementById('bookingForm');
+const notice = document.getElementById('formNotice');
+let selectedService = '';
+let selectedPrice = 0;
+serviceButtons.forEach(button => button.addEventListener('click', () => {
+  selectedService = button.dataset.service;
+  selectedPrice = Number(button.dataset.price);
+  selectedText.textContent = `${selectedService} — ${selectedPrice} €`;
+  document.querySelectorAll('.service-card').forEach(card => card.classList.remove('chosen'));
+  button.closest('.service-card').classList.add('chosen');
+  document.getElementById('reservar').scrollIntoView({behavior:'smooth'});
+}));
+const dateInput = document.getElementById('fecha');
+const localToday = new Date();
+dateInput.min = new Date(localToday.getTime() - localToday.getTimezoneOffset()*60000).toISOString().slice(0,10);
+document.getElementById('year').textContent = new Date().getFullYear();
+const menuToggle = document.getElementById('menuToggle');
+const navLinks = document.getElementById('navLinks');
+menuToggle.addEventListener('click', () => {
+  const open = navLinks.classList.toggle('open');
+  menuToggle.setAttribute('aria-expanded', String(open));
+  menuToggle.setAttribute('aria-label', open ? 'Cerrar menú' : 'Abrir menú');
+  menuToggle.textContent = open ? '×' : '☰';
+});
+navLinks.querySelectorAll('a').forEach(link => link.addEventListener('click', () => {
+  navLinks.classList.remove('open'); menuToggle.setAttribute('aria-expanded','false'); menuToggle.textContent='☰';
+}));
+bookingForm.addEventListener('submit', event => {
+  event.preventDefault();
+  if (!selectedService) {
+    notice.className = 'notice show';
+    notice.textContent = 'Primero elige uno de los servicios de lavado.';
+    document.getElementById('servicios').scrollIntoView({behavior:'smooth'});
+    return;
+  }
+  if (!bookingForm.reportValidity()) return;
+  const data = new FormData(bookingForm);
+  const summary = [
+    'SOLICITUD DE CITA — AQUA G',
+    `Nombre: ${data.get('nombre')}`,
+    `Teléfono: ${data.get('telefono')}`,
+    `Vehículo: ${data.get('vehiculo')} (${data.get('matricula')})`,
+    `Servicio: ${selectedService} — ${selectedPrice} €`,
+    `Fecha preferida: ${data.get('fecha')}`,
+    `Horario: ${data.get('franja')}`,
+    `Dirección: ${data.get('direccion')}`,
+    `Pago preferido: ${data.get('pago')}`,
+    `Notas: ${data.get('notas') || 'Ninguna'}`,
+    '',
+    'Pendiente de confirmación por Aqua G. No se ha realizado ningún pago.'
+  ].join('\n');
+  notice.className = 'notice show';
+  notice.textContent = 'Solicitud preparada. Puedes copiar el resumen que aparece a continuación y enviarlo al negocio. La cita aún no está confirmada.';
+  const old = document.getElementById('requestSummary');
+  if (old) old.remove();
+  const pre = document.createElement('pre');
+  pre.id = 'requestSummary';
+  pre.textContent = summary;
+  pre.style.cssText = 'white-space:pre-wrap;overflow-wrap:anywhere;background:#f4f8fa;border:1px solid #dbe6ec;border-radius:12px;padding:15px;margin-top:12px;font: .88rem/1.6 "DM Sans",sans-serif;color:#193548';
+  const copy = document.createElement('button');
+  copy.type = 'button'; copy.className = 'btn dark'; copy.textContent = 'Copiar resumen';
+  copy.style.cssText = 'width:100%;margin-top:10px';
+  copy.addEventListener('click', async () => {
+    try { await navigator.clipboard.writeText(summary); copy.textContent = 'Resumen copiado ✓'; }
+    catch { copy.textContent = 'Selecciona y copia el resumen'; }
+  });
+  notice.after(pre); pre.after(copy);
+});
+</script>
+</body>
+</html>
